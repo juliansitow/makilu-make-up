@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makilu & make-up - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">Makilu & make-up</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="is-active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li>
+                        <a href="#" id="cart-button" class="cart-icon">
+                            🛒
+                            <span id="cart-counter" class="cart-counter-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Descubre tu Belleza Interior</h2>
+            <p>Productos de alta calidad para resaltar tu glamour natural.</p>
+            <a href="productos.html" class="btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="novedades" class="section">
+            <h2 class="section-title">Novedades</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Imagenes/WhatsApp Image 2025-08-08 at 8.31.51 PM.jpeg" alt="Paleta de Sombras" class="product-image">
+                    <h3 class="product-name">Paleta de Sombras</h3>
+                    <p class="price product-price">$65.000</p>
+                    <a href="producto-detalle.html?id=paleta-sombras-bloom&name=Paleta%20de%20Sombras&price=65000&image=Imagenes%2FWhatsApp%20Image%202025-08-08%20at%208.31.51%20PM.jpeg&description=Una%20colecci%C3%B3n%20vibrante%20de%2012%20tonos%20altamente%20pigmentados%2C%20perfecta%20para%20crear%20looks%20desde%20naturales%20hasta%20dram%C3%A1ticos.%20F%C3%B3rmula%20de%20larga%20duraci%C3%B3n%20y%20f%C3%A1cil%20de%20difuminar." class="btn-secondary">Ver Producto</a>
+                </div>
+                <div class="product-card">
+                    <img src="Imagenes/WhatsApp Image 2025-08-08 at 8.30.41 PM.jpeg" alt="Máscara de Pestañas" class="product-image">
+                    <h3 class="product-name">Máscara de Pestañas</h3>
+                    <p class="price product-price">$41.000</p>
+                    <a href="producto-detalle.html?id=mascara-volumen&name=M%C3%A1scara%20de%20Pesta%C3%B1as&price=41000&image=Imagenes%2FWhatsApp%20Image%202025-08-08%20at%208.30.41%20PM.jpeg&description=Logra%20un%20volumen%20extremo%20y%20una%20longitud%20impactante%20con%20nuestra%20m%C3%A1scara%20a%20prueba%20de%20agua.%20Su%20cepillo%20de%20silicona%20define%20cada%20pesta%C3%B1a%20sin%20dejar%20grumos." class="btn-secondary">Ver Producto</a>
+                </div>
+                <div class="product-card">
+                    <img src="Imagenes/WhatsApp Image 2025-08-08 at 8.34.35 PM.jpeg" alt="Corrector Radiante" class="product-image">
+                    <h3 class="product-name">Corrector Radiante</h3>
+                    <p class="price product-price">$38.000</p>
+                    <a href="producto-detalle.html?id=corrector-radiante&name=Corrector%20Radiante&price=38000&image=Imagenes%2FWhatsApp%20Image%202025-08-08%20at%208.34.35%20PM.jpeg&description=Cubre%20imperfecciones%20e%20ilumina%20la%20zona%20de%20la%20ojera%20con%20este%20corrector%20cremoso%20de%20alta%20cobertura.%20Enriquecido%20con%20vitamina%20E%20para%20hidratar%20la%20piel." class="btn-secondary">Ver Producto</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart-button">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items-container"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> <span id="cart-total-price">$0</span>
+            </div>
+            <a href="checkout.html" class="btn-primary checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Makilu & make-up. Todos los derechos reservados.</p>
+            <div class="social-media">
+                <a href="#">Instagram</a> <a href="#">Facebook</a> <a href="#">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

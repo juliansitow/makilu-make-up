@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto - Makilu & make-up</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><h1 class="logo">Makilu & make-up</h1></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li>
+                        <a href="#" id="cart-button" class="cart-icon">
+                            🛒
+                            <span id="cart-counter" class="cart-counter-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="product-detail-page" class="section">
+            <div class="product-detail-layout">
+                <div class="product-detail-image-container">
+                    <img id="product-image" src="https://via.placeholder.com/600x600.png/FADADD/333333?text=Cargando..." alt="Imagen del producto" class="product-detail-image">
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="product-name" class="product-detail-title">Nombre del Producto</h2>
+                    <p id="product-price" class="price product-detail-price">$0</p>
+                    
+                    <div id="product-description" class="product-description">
+                        <p>Cargando descripción...</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="form-group">
+                            <label for="quantity">Cantidad</label>
+                            <div class="quantity-selector">
+                                <button type="button" id="quantity-minus" class="quantity-btn">-</button>
+                                <input type="text" id="quantity" value="1" min="1" readonly class="quantity-display">
+                                <button type="button" id="quantity-plus" class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tone">Tono (opcional)</label>
+                            <select id="tone" class="form-control">
+                                <option value="">Elige si aplica</option>
+                                <option value="Rojo Pasión">Rojo Pasión</option>
+                                <option value="Rosa Delicado">Rosa Delicado</option>
+                                <option value="Nude Clásico">Nude Clásico</option>
+                                <option value="Vino Intenso">Vino Intenso</option>
+                                <option value="Coral Verano">Coral Verano</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="add-to-cart-detail" class="btn-primary" style="width: 100%;">Añadir al Carrito</button>
+                    <p id="feedback-message" style="text-align: center; color: green; margin-top: 1rem; font-weight: 600;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart-button">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items-container"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> <span id="cart-total-price">$0</span>
+            </div>
+            <a href="checkout.html" class="btn-primary checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Makilu & make-up. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="carrito.js"></script>
+    <script src="producto-detalle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makilu & make-up - Finalizar Compra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos adicionales solo para esta página */
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        .order-summary-container {
+            background-color: var(--white-color);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .payment-instructions {
+            background-color: var(--soft-pink);
+            border-left: 4px solid var(--dark-pink);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .checkout-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><h1 class="logo">Makilu & make-up</h1></a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="checkout-page" class="section">
+            <h2 class="section-title">Casi listo, ¡finaliza tu pedido!</h2>
+            <div class="checkout-layout">
+                <div class="checkout-form-container">
+                    <h3>Tus Datos de Envío</h3>
+                    <form id="checkout-form" class="contact-form" style="margin: 0;">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cedula">Cédula</label>
+                            <input type="text" id="cedula" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Dirección Completa (con barrio, apto, etc.)</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Tu número de Celular / Nequi</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Hacer Pedido por WhatsApp</button>
+                    </form>
+                </div>
+                <div class="order-summary-container">
+                    <h3>Resumen de tu Pedido</h3>
+                    <div id="order-summary-items"></div>
+                    <div class="cart-total" style="font-size: 1.3rem;">
+                        <strong>Total a Pagar:</strong> <span id="summary-total-price">$0</span>
+                    </div>
+                    <div class="payment-instructions">
+                        <p>Al hacer tu pedido por WhatsApp, te daremos nuestro número de <strong>Nequi</strong> para que completes el pago.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="checkout.js"></script>
+</body>
+</html>
